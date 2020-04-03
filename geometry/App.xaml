@@ -4,6 +4,16 @@
              xmlns:local="clr-namespace:geometry"
              StartupUri="Views/MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+
+                <ResourceDictionary Source="Styles/Color.xaml" />
+
+                <ResourceDictionary Source="Styles/ViewModelStyles.xaml" />
+
+                
+                
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

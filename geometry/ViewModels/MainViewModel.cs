@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace geometry.ViewModels
 {
-    public class MainViewModel : Navigation.NavigateViewModel
+    public class MainViewModel : ViewModelBase
     {
 
     }

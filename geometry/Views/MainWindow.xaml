@@ -8,22 +8,30 @@
         mc:Ignorable="d"
         Title="Geometry" Height="450" Width="800">
 
-    <Window.DataContext>
-        <VM:MainViewModel />
-    </Window.DataContext>
+    <Window.Resources>
+        <VM:MainViewModel x:Key="MVM" />
+    </Window.Resources>
 
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="250"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="160"/>
+            <RowDefinition Height="320*"/>
+        </Grid.RowDefinitions>
 
-        <Grid Background="Black">
-            
+        <Grid Background="{StaticResource DarkBlack}" Grid.Row="0">
+
+            <Label Content="Geometry" Style="{StaticResource Logo}" />
+
+            <DockPanel VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="150 0 0 0">
+                
+                <Button Content="Figure" Style="{StaticResource Button}" Command="{Binding PageNavigate, Source={StaticResource MVM}}" />
+                <Button Content="Figure" Style="{StaticResource Button}" Command="{Binding PageNavigate, Source={StaticResource MVM}}" />
+                
+            </DockPanel>
         </Grid>
 
-        <Grid Grid.Column="1">
-            <Frame x:Name="MainFrame" NavigationUIVisibility="Visible" />
+        <Grid Grid.Row="1" Background="{StaticResource DarkDarkBlack}">
+            <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" />
         </Grid>
 
     </Grid>
