@@ -27,9 +27,9 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="21*"/>
             <RowDefinition Height="115*"/>
-            <RowDefinition Height="42*"/>
+            <RowDefinition Height="20*"/>
             <RowDefinition Height="115*"/>
-            <RowDefinition Height="42*"/>
+            <RowDefinition Height="20*"/>
             <RowDefinition Height="115*"/>
             <RowDefinition Height="41*"/>
         </Grid.RowDefinitions>
@@ -38,7 +38,11 @@
             <figures:Cube />
         </Grid>
 
-        
+        <Grid Grid.Row="1" Grid.Column="3">
+            <figures:Trapeze />
+        </Grid>
+
+
 
 
     </Grid>

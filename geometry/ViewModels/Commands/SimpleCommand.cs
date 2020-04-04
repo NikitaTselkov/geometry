@@ -25,7 +25,7 @@ namespace geometry.ViewModels.Commands
 
         public void Execute(object parameter)
         {
-            this.ViewModel.SimpleMethod();
+            this.ViewModel.GoToCount();
         }
     }
 }

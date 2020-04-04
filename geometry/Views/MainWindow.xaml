@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:geometry"
         xmlns:VM="clr-namespace:geometry.ViewModels"
         mc:Ignorable="d"
-        Title="Geometry" Height="450" Width="800">
+        Title="Geometry" Height="620" Width="1000" MinWidth="1000" MinHeight="620">
 
     <Window.Resources>
         <VM:MainViewModel x:Key="MVM" />
@@ -25,9 +25,9 @@
             <DockPanel VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="150 0 0 0">
                 
                 <Button Content="Figure" Style="{StaticResource Button}" Command="{Binding PageNavigate, Source={StaticResource MVM}}" />
-                <Button Content="Figure" Style="{StaticResource Button}" Command="{Binding PageNavigate, Source={StaticResource MVM}}" />
-                
+
             </DockPanel>
+            
         </Grid>
 
         <Grid Grid.Row="1" Background="{StaticResource DarkDarkBlack}">

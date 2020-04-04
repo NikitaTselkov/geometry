@@ -21,9 +21,9 @@ namespace geometry.ViewModels
             this.SimpleCommand = new SimpleCommand(this);
         }
 
-        public void SimpleMethod()
+        public void GoToCount()
         {
-            Debug.WriteLine("Hello");
+            Navigate("Views/Count.xaml");
         }
 
         public void GoToFigures()

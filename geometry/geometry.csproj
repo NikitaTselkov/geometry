@@ -76,8 +76,14 @@
     <Compile Include="ViewModels\Commands\PageNavigate.cs" />
     <Compile Include="ViewModels\Commands\SimpleCommand.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="Views\Count.xaml.cs">
+      <DependentUpon>Count.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Figures\Cube.xaml.cs">
       <DependentUpon>Cube.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Figures\Trapeze.xaml.cs">
+      <DependentUpon>Trapeze.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\SelectShape.xaml.cs">
       <DependentUpon>SelectShape.xaml</DependentUpon>
@@ -94,7 +100,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Count.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Figures\Cube.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Figures\Trapeze.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -148,6 +162,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Image\Cube.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Trapeze.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
