@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace geometry.Views
+namespace geometry.Views.Figures
 {
     /// <summary>
-    /// Логика взаимодействия для Page1.xaml
+    /// Логика взаимодействия для Cube.xaml
     /// </summary>
-    public partial class Page1 : Page
+    public partial class Cube : UserControl
     {
-        public Page1()
+        public Cube()
         {
             InitializeComponent();
         }

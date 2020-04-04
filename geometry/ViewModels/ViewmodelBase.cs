@@ -26,9 +26,9 @@ namespace geometry.ViewModels
             Debug.WriteLine("Hello");
         }
 
-        public void GoToCube()
+        public void GoToFigures()
         {
-            Navigate("Views/Page1.xaml");
+            Navigate("Views/SelectShape.xaml");
         }
 
     }

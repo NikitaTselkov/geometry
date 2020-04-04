@@ -11,6 +11,8 @@
 
                 <ResourceDictionary Source="Styles/ViewModelStyles.xaml" />
 
+                <ResourceDictionary Source="Styles/SelectShape.xaml" />
+
                 
                 
             </ResourceDictionary.MergedDictionaries>

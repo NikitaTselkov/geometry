@@ -25,7 +25,7 @@ namespace geometry.ViewModels.Commands
 
         public void Execute(object parameter)
         {
-            this.ViewModel.GoToCube();
+            this.ViewModel.GoToFigures();
         }
     }
 }
