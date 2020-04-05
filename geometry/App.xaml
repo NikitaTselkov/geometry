@@ -20,7 +20,8 @@
 
                 <ResourceDictionary Source="Styles/SelectShape.xaml" />
 
-                
+                <ResourceDictionary Source="Styles/CountStyles.xaml" />
+
                 
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>

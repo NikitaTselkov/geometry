@@ -17,6 +17,8 @@ namespace geometry.Navigation
 
             SimpleIoc.Default.Register<ViewModels.MainViewModel>();
 
+            SimpleIoc.Default.Register<ViewModels.MainCount>();
+
         }
 
         public ViewModels.MainViewModel Main
@@ -24,6 +26,14 @@ namespace geometry.Navigation
             get
             {
                 return ServiceLocator.Current.GetInstance<ViewModels.MainViewModel>();
+            }
+        }
+
+        public ViewModels.MainCount Count
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<ViewModels.MainCount>();
             }
         }
 

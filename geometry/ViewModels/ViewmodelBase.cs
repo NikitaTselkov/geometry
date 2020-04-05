@@ -14,11 +14,14 @@ namespace geometry.ViewModels
 
         public PageNavigate PageNavigate { get; set; }
 
-        public ViewModelBase()
-        {
-            this.PageNavigate = new PageNavigate(this);
+        public GoToSetV GoToSetV { get; set; } 
 
-            this.SimpleCommand = new SimpleCommand(this);
+
+
+
+        public void GoToSetValue()
+        {
+            NavigateSetData("Views/SetDataValue.xaml");
         }
 
         public void GoToCount()

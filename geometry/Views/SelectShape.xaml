@@ -42,6 +42,14 @@
             <figures:Trapeze />
         </Grid>
 
+        <Grid Grid.Row="1" Grid.Column="5">
+            <figures:Cylinder />
+        </Grid>
+
+        <Grid Grid.Row="1" Grid.Column="7">
+            <figures:Sphere />
+        </Grid>
+
 
 
 

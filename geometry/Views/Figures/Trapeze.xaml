@@ -18,7 +18,7 @@
 
     <Grid>
         <Viewbox>
-            <Button Style="{StaticResource Cube}" Command="{Binding SimpleCommand}">
+            <Button Style="{StaticResource ButtonBack}" Command="{Binding SimpleCommand}">
                 <Image Source="{StaticResource TrapezeF}" Width="300" Height="200" />
             </Button>
         </Viewbox>

@@ -4,11 +4,50 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:geometry.Views"
+      xmlns:UC="clr-namespace:geometry.Views.UserControls"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Count">
+      Title="Count"
+      DataContext="{Binding Count, Source={StaticResource Locator}}">
 
     <Grid Background="{StaticResource DarkDarkBlack}">
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="210*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="186*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="408*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="176*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Row="1" Grid.Column="1" Background="{StaticResource DarkBlack}">
+            <Label Content="Given" Style="{StaticResource Logo}" />
+
+            <StackPanel Margin="10 80 10 0">
+
+                <UC:InputValue />
+
+                <UC:InputValue />
+
+            </StackPanel>
+            
+        </Grid>
+
+        <Grid Grid.Row="1" Grid.Column="3" Background="{StaticResource DarkBlack}">
+
+        </Grid>
+
+        <Grid Grid.Row="1" Grid.Column="5" Background="{StaticResource DarkBlack}">
+
+        </Grid>
+
+
+
     </Grid>
 </Page>

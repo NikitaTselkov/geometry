@@ -8,9 +8,6 @@
         mc:Ignorable="d"
         Title="Geometry" Height="620" Width="1000" MinWidth="1000" MinHeight="620">
 
-    <Window.Resources>
-        <VM:MainViewModel x:Key="MVM" />
-    </Window.Resources>
 
     <Grid>
         <Grid.RowDefinitions>
@@ -22,9 +19,10 @@
 
             <Label Content="Geometry" Style="{StaticResource Logo}" />
 
-            <DockPanel VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="150 0 0 0">
+            <DockPanel VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="150 0 0 0" DataContext="{Binding Main, Source={StaticResource Locator}}">
                 
-                <Button Content="Figure" Style="{StaticResource Button}" Command="{Binding PageNavigate, Source={StaticResource MVM}}" />
+                <Button Content="Figure" Style="{StaticResource Button}" Command="{Binding PageNavigate}" />
+                <Button Content="Decision" Style="{StaticResource Button}" Command="{Binding SimpleCommand}" />
 
             </DockPanel>
             

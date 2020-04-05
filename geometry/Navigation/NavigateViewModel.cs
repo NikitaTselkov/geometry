@@ -21,5 +21,10 @@ namespace geometry.Navigation
             Messenger.Default.Send<NavigateArgs>(new NavigateArgs(url));
         }
 
+        public void NavigateSetData(string url)
+        {
+            Messenger.Default.Send<NavigateArgsSetData>(new NavigateArgsSetData(url));
+        }
+
     }
 }
