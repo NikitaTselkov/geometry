@@ -17,12 +17,12 @@
 
 
             <Button x:Name="ButtonValue" Style="{StaticResource InputButton}" Command="{Binding GoToSetV}">
-                <TextBlock>
+                <TextBlock Style="{StaticResource RunStyle}" Tag="{Binding ElementName=Setting, Path=Straight, UpdateSourceTrigger=PropertyChanged}">
                     
-                    <Run Text="AB" Foreground="{StaticResource DarkBlue}" />
+                    <Run Text="{Binding ElementName=Setting, Path=Straight, UpdateSourceTrigger=PropertyChanged}" Foreground="{StaticResource DarkBlue}" />
                     <Run Text="=" Foreground="{StaticResource DarkWhite}" />
-                    <Run Text="50" Foreground="{StaticResource DarkWhite}" />
-                
+                    <Run Text="{Binding ElementName=Setting, Path=ValueNum, UpdateSourceTrigger=PropertyChanged}" Foreground="{StaticResource DarkWhite}" />
+
                 </TextBlock>
             </Button>
 
@@ -30,7 +30,7 @@
 
         </Grid>
 
-        <UC:SetData x:Name="Setting" Visibility="{Binding ElementName=ButtonValue, Path=Tag}" />
+        <UC:SetData x:Name="Setting" IsPressed="{Binding ElementName=ButtonValue, Path=IsPressed}" Visibility="Collapsed" />
 
     </StackPanel>
 

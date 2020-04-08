@@ -29,14 +29,24 @@
         <Grid Grid.Row="1" Grid.Column="1" Background="{StaticResource DarkBlack}">
             <Label Content="Given" Style="{StaticResource Logo}" />
 
-            <StackPanel Margin="10 80 10 0">
+            <Grid Margin="10 80 10 0">
 
-                <UC:InputValue />
+                <ScrollViewer VerticalScrollBarVisibility="Hidden">
 
-                <UC:InputValue />
+                    <StackPanel>
 
-            </StackPanel>
-            
+                        <UC:InputValue />
+
+                        <UC:InputValue />
+
+                        <UC:InputValue />
+
+                    </StackPanel>
+
+                </ScrollViewer>
+                
+            </Grid>
+
         </Grid>
 
         <Grid Grid.Row="1" Grid.Column="3" Background="{StaticResource DarkBlack}">

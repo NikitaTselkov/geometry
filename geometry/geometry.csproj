@@ -115,9 +115,6 @@
     <Compile Include="Views\UserControls\SetData.xaml.cs">
       <DependentUpon>SetData.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\SetDataValue.xaml.cs">
-      <DependentUpon>SetDataValue.xaml</DependentUpon>
-    </Compile>
     <Page Include="Styles\Color.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -176,10 +173,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\UserControls\SetData.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\SetDataValue.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

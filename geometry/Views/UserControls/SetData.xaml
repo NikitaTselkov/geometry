@@ -3,10 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:geometry.Views.UserControls"
+             xmlns:UC="clr-namespace:geometry.Views.UserControls"
+             xmlns:VM="clr-namespace:geometry.ViewModels"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800"
-             DataContext="{Binding Count, Source={StaticResource Locator}}">
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+
+            <VM:MainCount x:Key="VMC" />
+
+        </ResourceDictionary>
+    </UserControl.Resources>
 
     <Grid MaxWidth="420" MaxHeight="420" Margin="0 20 0 0">
 
@@ -26,6 +34,7 @@
                         </TransformGroup>
                     </Rectangle.RenderTransform>
 
+
                 </Rectangle>
 
                 <Grid
@@ -37,7 +46,20 @@
                         Background="{StaticResource DarkBlack}"
                         Margin="10">
 
-                        <Frame x:Name="FrameSetData" NavigationUIVisibility="Hidden" />
+
+                        <Grid Background="{StaticResource DarkBlack}">
+
+                            <StackPanel>
+
+
+                                <Button Style="{StaticResource SettingButton}" Content="Length" />
+                                <TextBox Style="{StaticResource userText}" Text="{Binding Straight}" Foreground="{StaticResource DarkBlue}" />
+                                <TextBox Style="{StaticResource userText}" Text="{Binding ValueNum, Mode=TwoWay}" />
+
+
+                            </StackPanel>
+
+                        </Grid>
 
                     </Grid>
 

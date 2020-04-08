@@ -24,16 +24,63 @@
                         BorderThickness="0">
 
                         <ContentPresenter
+                            x:Name="Input"
                             Content="{TemplateBinding Content}"
                             VerticalAlignment="Center"
                             Margin="10 0"
-                         />
+                        />
+
+                    </Border>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="RunStyle" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="{StaticResource DarkWhite}" />
+
+        <Style.Triggers>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="Tag" Value="" />
+                </MultiTrigger.Conditions>
+                <MultiTrigger.Setters>
+                    <Setter Property="Visibility" Value="Hidden" />
+                </MultiTrigger.Setters>
+            </MultiTrigger>
+        </Style.Triggers>
+    </Style>
+
+
+    <Style x:Key="SettingButton" TargetType="Button">
+        <Setter Property="Background" Value="{StaticResource DarkDarkBlack}" />
+        <Setter Property="Height" Value="70" />
+        <Setter Property="FontFamily" Value="MS Shell Dlg 2" />
+        <Setter Property="Margin" Value="15 15 15 0" />
+        <Setter Property="Foreground" Value="{StaticResource DarkWhite}" />
+        <Setter Property="FontSize" Value="50" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+
+                    <Border
+                        Background="{TemplateBinding Background}"
+                        Height="{TemplateBinding Height}"
+                        BorderThickness="0">
+
+                        <ContentPresenter
+                            x:Name="ContentP"
+                            Content="{TemplateBinding Content}"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                        />
 
                     </Border>
 
                     <ControlTemplate.Triggers>
-                        <Trigger Property="IsFocused" Value="True">
-                            <Setter Property="Tag" Value="Visible" />
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="FontSize" Value="45" />
                         </Trigger>
                     </ControlTemplate.Triggers>
 
@@ -41,5 +88,66 @@
             </Setter.Value>
         </Setter>
     </Style>
+
+
+    <Style x:Key="userText" TargetType="TextBox">
+        <Setter Property="FontSize" Value="50" />
+        <Setter Property="Margin" Value="15 15 15 0" />
+        <Setter Property="Background" Value="{StaticResource DarkDarkBlack}" />
+        <Setter Property="Foreground" Value="{StaticResource DarkWhite}" />
+        <Setter Property="Visibility" Value="Collapsed" />
+        <Setter Property="TextAlignment" Value="Center" />
+        <Setter Property="Height" Value="70" />
+        <Setter Property="Text" Value="{x:Null}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TextBox">
+                    <Border
+                            Height="{TemplateBinding Height}"
+                            Background="{TemplateBinding Background}"
+                            BorderThickness="0"
+                            MaxHeight="{TemplateBinding MaxHeight}"
+                            Visibility="{TemplateBinding Visibility}">
+
+
+                        <Grid>
+                            <ScrollViewer x:Name="PART_ContentHost" Margin="0" />
+
+                            <TextBlock 
+                                Text="Value"
+                                x:Name="hint"
+                                VerticalAlignment="Center"
+                                Background="Transparent"
+                                Foreground="{StaticResource DarkGray}"
+                                FontSize="{TemplateBinding FontSize}"
+                                IsHitTestVisible="False"
+                                TextAlignment="{TemplateBinding TextAlignment}"
+                                Visibility="Collapsed"
+                                TextWrapping="{TemplateBinding TextWrapping}"
+                                HorizontalAlignment="Center"
+                            />
+                        </Grid>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="Text" Value="" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="hint" Property="Visibility" Value="Visible" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsEnabled" Value="true" />
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Visibility" Value="Visible" />
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
 
 </ResourceDictionary>

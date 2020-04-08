@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace geometry.ViewModels
 {
@@ -14,7 +15,7 @@ namespace geometry.ViewModels
 
         public PageNavigate PageNavigate { get; set; }
 
-        public GoToSetV GoToSetV { get; set; } 
+        public GoToSetV GoToSetV { get; set; }
 
 
 
