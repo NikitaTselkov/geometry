@@ -38,6 +38,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Caliburn.Micro, Version=3.2.0.0, Culture=neutral, PublicKeyToken=8e5891231f2ed21f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Caliburn.Micro.Core.3.2.0\lib\net45\Caliburn.Micro.dll</HintPath>
+    </Reference>
     <Reference Include="CommonServiceLocator, Version=2.0.2.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
       <HintPath>..\packages\CommonServiceLocator.2.0.2\lib\net47\CommonServiceLocator.dll</HintPath>
     </Reference>
@@ -109,6 +112,12 @@
     <Compile Include="Views\SelectShape.xaml.cs">
       <DependentUpon>SelectShape.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\UserControls\FindInputValue.xaml.cs">
+      <DependentUpon>FindInputValue.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\FindSetData.xaml.cs">
+      <DependentUpon>FindSetData.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\UserControls\InputValue.xaml.cs">
       <DependentUpon>InputValue.xaml</DependentUpon>
     </Compile>
@@ -165,6 +174,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Views\SelectShape.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\FindInputValue.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\FindSetData.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

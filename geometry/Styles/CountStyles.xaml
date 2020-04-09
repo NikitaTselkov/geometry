@@ -149,5 +149,41 @@
         </Setter>
     </Style>
 
+    <Style x:Key="Spawn" TargetType="Button">
+        <Setter Property="Height" Value="50" />
+        <Setter Property="Width" Value="110" />
+        <Setter Property="Margin" Value="15 15 15 0" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="FontSize" Value="30" />
+        <Setter Property="FontFamily" Value="MS Shell Dlg 2" />
+        <Setter Property="Foreground" Value="{StaticResource DarkWhite}" />
+        <Setter Property="Background" Value="{StaticResource DarkDarkBlack}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+
+                    <Border 
+                        Background="{TemplateBinding Background}"
+                        BorderThickness="0">
+
+                        <ContentPresenter 
+                            Content="{TemplateBinding Content}"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                        />
+
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="FontSize" Value="27" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
 
 </ResourceDictionary>

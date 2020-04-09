@@ -54,6 +54,22 @@
         </Grid>
 
         <Grid Grid.Row="1" Grid.Column="5" Background="{StaticResource DarkBlack}">
+            
+            <Label Content="Find" Style="{StaticResource Logo}" />
+
+            <Grid Margin="10 80 10 0">
+
+                <ScrollViewer VerticalScrollBarVisibility="Hidden">
+
+                    <StackPanel>
+
+                        <UC:FindInputValue />
+
+                    </StackPanel>
+
+                </ScrollViewer>
+
+            </Grid>
 
         </Grid>
 
